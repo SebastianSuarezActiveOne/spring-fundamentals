@@ -5,7 +5,7 @@
 
     <bean name="customerRepository" class="com.pluralsight.repository.HibernateCustomerRepositoryImpl"/>
     <bean name="customerServive" class="com.pluralsight.service.CustomerServiceImpl">
-        <property name="customerRepository" ref="customerRepository"/>
+        <constructor-arg index="0" ref="customerRepository"/>
     </bean>
 
 </beans>
