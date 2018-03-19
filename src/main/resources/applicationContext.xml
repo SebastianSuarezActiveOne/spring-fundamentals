@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="customerRepository" class="com.pluralsight.repository.HibernateCustomerRepositoryImpl"/>
-    <bean name="customerServive" class="com.pluralsight.service.CustomerServiceImpl">
-        <constructor-arg index="0" ref="customerRepository"/>
+    <bean name="customerServive" class="com.pluralsight.service.CustomerServiceImpl" autowire="constructor">
+        <!-- <constructor-arg index="0" ref="customerRepository"/> -->
     </bean>
 
 </beans>
