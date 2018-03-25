@@ -1,7 +1,6 @@
 import com.pluralsight.service.CustomerService;
-import com.pluralsight.service.CustomerServiceImpl;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Application {
 
@@ -9,7 +8,7 @@ public class Application {
 
         //CustomerService service = new CustomerServiceImpl();
 
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
         CustomerService service = applicationContext.getBean("customerService", CustomerService.class);
 

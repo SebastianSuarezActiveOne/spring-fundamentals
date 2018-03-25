@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("customerService")
+//@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
     //@Autowired
     private CustomerRepository customerRepository;
 
-    @Autowired
+    //@Autowired
     public CustomerServiceImpl(CustomerRepository customerRepository) {
         System.out.println("Using constructor injection");
         this.customerRepository = customerRepository;
